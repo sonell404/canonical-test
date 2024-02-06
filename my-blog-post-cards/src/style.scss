@@ -1,0 +1,45 @@
+@import "vanilla-framework";
+@include vanilla;
+
+.preview {
+    margin-top: 2rem !important;
+}
+
+.blog-p-card--post {
+  display: flex !important;
+  flex-direction: column;
+  padding: 0;
+}
+
+.blog-p-card__header {
+  border-radius: 2px;
+  border-top: 3px solid #666;
+  padding: .5rem 1rem 0.5rem;
+}
+
+.blog-p-card--post > .blog-p-card__content {
+  border-top: 1px dotted #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem 0.1rem 0.1rem;
+}
+.blog-p-card__content {
+  position: relative;
+}
+.blog-p-card__content a {
+  margin-bottom: 2rem;
+}
+.blog-p-card__content p {
+  position: absolute;
+  bottom: 0;
+  padding-top: 2rem;
+}
+
+.blog-p-card--post .blog-p-card__footer {
+  border-top: 1px dotted #d9d9d9;
+  font-size: 0.875rem;
+  max-width: inherit;
+  padding-top: .75rem;
+  margin-bottom: .5rem !important;
+}
