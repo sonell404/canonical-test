@@ -10,11 +10,13 @@ const BlogCard = (post) => {
         </h2>
       </header>
       <div className="blog-p-card__content">
-        <img
-          src={post.featured_media}
-          alt={post.title.rendered}
-          className="p-card__image"
-        />
+        <a href={post.link} target="_blank" rel="noreferrer">
+          <img
+            src={post.featured_media}
+            alt={post.title.rendered}
+            className="p-card__image"
+          />
+        </a>
         <a href={post.link} target="_blank" rel="noreferrer">
           <h3 className="p-heading--4">{post.title.rendered}</h3>
         </a>
@@ -22,7 +24,11 @@ const BlogCard = (post) => {
           <em className="">
             <i className="sph--small u-align-text--left">
               by{" "}
-              <a href={post._embedded.author[0].link} target="_blank" rel="noreferrer">
+              <a
+                href={post._embedded.author[0].link}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span className="">{post._embedded.author[0].slug}</span>
               </a>{" "}
               <span className="">
@@ -32,9 +38,7 @@ const BlogCard = (post) => {
           </em>
         </p>
       </div>
-      <p className="blog-p-card__footer">
-        Article
-      </p>
+      <p className="blog-p-card__footer">Article</p>
     </div>
   );
 };
